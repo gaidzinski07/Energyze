@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
             this.gasAmount = 0; // Garante que a energia não seja negativa
             DecreaseLife();
             Debug.Log("Energia esgotada!");
-            this.lifeAmountTMP.text = lifes.ToString();
+
             this.gasAmount = this.gasLimit/2;
             //this.transform.position = new Vector3(408, 16, 341);
             //this.lightingManager.GetComponent<LightingManager>().FinalizarDia(this, null);
@@ -213,6 +213,13 @@ public class GameManager : MonoBehaviour
     public void DecreaseLife()
     {
         lifes--;
+        this.lifeAmountTMP.text = lifes.ToString();
+
+        if(lifes == 0)
+        {
+            gameOverEvent.Raise(this, null);
+        }
+
         if(lifes > 0)
             notificationEvent.Raise(this, new NotificationSetup("1 life lost", "warning"));
     }
@@ -220,7 +227,8 @@ public class GameManager : MonoBehaviour
     public void checkGameOverOnEndOfDay(Component sender, object data)
     {
         if (distance >= 50) {
-            gameOverEvent.Raise(this, null);
+            DecreaseLife();
+            this.player.transform.position = new Vector3(1680, 16, 1582);
         }
     }
 

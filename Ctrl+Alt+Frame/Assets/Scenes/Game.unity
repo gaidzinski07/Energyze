@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (7)
@@ -1535,7 +1539,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6376,6 +6380,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (17)
@@ -8881,7 +8889,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -11055,6 +11063,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (12)
@@ -12892,6 +12904,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (18)
@@ -16588,7 +16604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10000
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9ba00838801c1439f33c67f888e8bc, type: 2}
   m_sharedMaterial: {fileID: 8644265429932095624, guid: ab9ba00838801c1439f33c67f888e8bc, type: 2}
@@ -19269,7 +19285,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -19786,7 +19802,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.76e-43, y: 0, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.7e-44, z: 4.214e-42, w: 1.7625958e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -21117,6 +21133,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (14)
@@ -22946,6 +22966,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (2)
@@ -24971,6 +24995,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (10)
@@ -25595,8 +25623,8 @@ MonoBehaviour:
   gasBar: {fileID: 654914242}
   timer: 0
   energyLossRate: 1
-  bombAmount: 1
-  roofBombAmount: 1
+  bombAmount: 3
+  roofBombAmount: 3
   collectedEnergyEvent: {fileID: 11400000, guid: f84a056e310188641ac504413531be38, type: 2}
   batteryAmountEvent: {fileID: 11400000, guid: ccc3fd95d97962e40a536756015e169e, type: 2}
   gameOverEvent: {fileID: 11400000, guid: 84d637f801d38374a8c9fb2450644114, type: 2}
@@ -25626,7 +25654,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2.2882504, y: 1.5991886, z: 3.7862213}
   m_Center: {x: 0.0149736935, y: 0.68906736, z: -0.0449381}
@@ -26729,7 +26757,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -29237,6 +29265,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (16)
@@ -29807,6 +29839,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (3)
@@ -34150,7 +34186,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -35822,6 +35858,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (13)
@@ -36795,6 +36835,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (5)
@@ -39135,6 +39179,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (1)
@@ -45560,7 +45608,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -46448,6 +46496,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (4)
@@ -47675,6 +47727,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (9)
@@ -47889,6 +47945,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (6)
@@ -49393,6 +49453,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (15)
@@ -49503,7 +49567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100000
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab9ba00838801c1439f33c67f888e8bc, type: 2}
   m_sharedMaterial: {fileID: 8644265429932095624, guid: ab9ba00838801c1439f33c67f888e8bc, type: 2}
@@ -50194,8 +50258,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1739373469}
   - component: {fileID: 1739373471}
-  - component: {fileID: 1739373473}
   - component: {fileID: 1739373472}
+  - component: {fileID: 1739373473}
   m_Layer: 5
   m_Name: Contador de Dias
   m_TagString: Untagged
@@ -50248,6 +50312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1965748179}
+  lm: {fileID: 1852043013}
 --- !u!114 &1739373473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50801,6 +50866,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (8)
@@ -52245,7 +52314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1844765692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52369,6 +52438,7 @@ MonoBehaviour:
   timeOfDay: 6
   inicioDoDia: 6
   fimDoDia: 19
+  dia: 0
   onDayChanged: {fileID: 11400000, guid: 4b841dd0053140b419548c4a6c6b02f5, type: 2}
   onClockChanged: {fileID: 11400000, guid: 20ce6cecefca6ee4f9663a823fbd7610, type: 2}
   notificationHappened: {fileID: 11400000, guid: eb0d864dca98b2341919c7feff21a3fc, type: 2}
@@ -52973,7 +53043,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 776c3d33619e7164b9ec4b0557efe5e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -55431,6 +55501,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C (11)
@@ -61384,7 +61458,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -63842,6 +63916,10 @@ PrefabInstance:
       propertyPath: input
       value: 
       objectReference: {fileID: 1380675240}
+    - target: {fileID: 3071924836576491713, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
+      propertyPath: distanceThreshold
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3181504403714088569, guid: 20c4e0c2e98f86940b6dcf5a80edc010, type: 3}
       propertyPath: m_Name
       value: Loot C

@@ -83,7 +83,7 @@ public class Looteable : MonoBehaviour
         }
 
         this.CategoryLoot = Random.Range(0, 100);
-        this.CategoryLoot += 10 * lootRarityType;
+        this.CategoryLoot += 20 * lootRarityType;
         if ((this.CategoryLoot + this.lootRarityIncrease) < 70)
         {
             //Debug.Log("Item comum encontrado");
@@ -106,11 +106,11 @@ public class Looteable : MonoBehaviour
     {
         if (rarity == "comum")
         {
-            this.energy = Random.Range(10, 50);
+            this.energy = Random.Range(30, 90);
         }
         else if (rarity == "escasso")
         {
-            this.energy = Random.Range(70, 200);
+            this.energy = Random.Range(100, 200);
         }
         else
         {

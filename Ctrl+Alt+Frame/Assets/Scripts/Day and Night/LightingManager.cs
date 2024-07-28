@@ -18,7 +18,7 @@ public class LightingManager : MonoBehaviour
     [Range(1, 23)]
     public float fimDoDia = 19;
 
-    private int dia = 0;
+    public int dia = 0;
     private bool disparouNotificacaoFimDia = false;
 
     [Header("Event")]
