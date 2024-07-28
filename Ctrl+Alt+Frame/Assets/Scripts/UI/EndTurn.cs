@@ -8,13 +8,11 @@ public class EndTurn : MonoBehaviour
     public GameEvent endTurnClick;
     public GameObject buyScreen;
     public GameObject guiCanvas;
-    private AudioSource audioSource;
     //private CanvasGroup canvasGUI;
 
     public void endTurn()
     {
-        this.audioSource = GetComponent<AudioSource>();
-        this.audioSource.Play();
+
 
         endTurnClick.Raise(this, null);
     }
