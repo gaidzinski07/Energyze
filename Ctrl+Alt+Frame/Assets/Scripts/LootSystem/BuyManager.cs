@@ -59,6 +59,12 @@ public class BuyManager : MonoBehaviour
 
     public void applyBattery()
     {
+        if (gameManager.bateryLevel == 3)
+        {
+            return;
+        }
+
+        Debug.Log("compra bateria");
         this.BuySource.Play();
         var energy = this.gameManager.GetEnergyAmount();
         var neededBatteryXp = roofBatteryXp - currentBatteryXp;
@@ -83,6 +89,10 @@ public class BuyManager : MonoBehaviour
                 roofBatteryXp = this.roofBatteryLv3;
                 gameManager.bateryLevel += 1;
                 batteryLevelTMP.text = gameManager.bateryLevel.ToString();
+                currentBatteryTMP.text = "MAX";
+                currentBatteryRoofTMP.text = "";
+                OnApplyEnergy();
+                return;
             }
             currentBatteryRoofTMP.text = roofBatteryXp.ToString();
         }
@@ -96,6 +106,11 @@ public class BuyManager : MonoBehaviour
 
     public void applyEngine()
     {
+        if (gameManager.EngineLevel == 3)
+        {
+            return;
+        }
+
         this.BuySource.Play();
         var energy = this.gameManager.GetEnergyAmount();
         var neededEngineXp = roofEngineXp - currentEngineXp;
@@ -120,6 +135,10 @@ public class BuyManager : MonoBehaviour
                 roofEngineXp = this.roofEngineLv3;
                 gameManager.EngineLevel += 1;
                 engineLevelTMP.text = gameManager.EngineLevel.ToString();
+                currentEngineTMP.text = "MAX";
+                currentEngineRoofTMP.text = "";
+                OnApplyEnergy();
+                return;
             }
             currentEngineRoofTMP.text = roofEngineXp.ToString();
         }
@@ -134,6 +153,11 @@ public class BuyManager : MonoBehaviour
 
     public void applyHook()
     {
+        if (gameManager.hookLevel == 3)
+        {
+            return;
+        }
+
         this.BuySource.Play();
         var energy = this.gameManager.GetEnergyAmount();
         var neededHookXp = roofHookXp - currentHookXp;
@@ -157,6 +181,10 @@ public class BuyManager : MonoBehaviour
             {
                 roofHookXp = this.roofHookLv3;
                 gameManager.hookLevel += 1;
+                currentHookTMP.text = "MAX";
+                currentHookRoofTMP.text = "";
+                OnApplyEnergy();
+                return;
             }
             currentHookRoofTMP.text = roofHookXp.ToString();
         }

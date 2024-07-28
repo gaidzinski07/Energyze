@@ -37,6 +37,7 @@ public class EnemyFollow : MonoBehaviour
             }
             else
             {
+                this.transform.LookAt(this.player.transform);
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
             }
 

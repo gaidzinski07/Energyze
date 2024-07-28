@@ -18,7 +18,7 @@ public class LightingManager : MonoBehaviour
     [Range(1, 23)]
     public float fimDoDia = 19;
 
-    private int dia = 0;
+    public int dia = 0;
     private bool disparouNotificacaoFimDia = false;
 
     [Header("Event")]
@@ -33,7 +33,8 @@ public class LightingManager : MonoBehaviour
     private CanvasGroup canvasGUI;
 
     public GameObject audioSourceObj;
-    private AudioSource audioSource;
+    private AudioSource audioSourceCanvas;
+    private AudioSource audioSourceSound;
 
     private GameManager gm;
 
@@ -51,7 +52,8 @@ public class LightingManager : MonoBehaviour
 
         }
         this.canvasGroup.gameObject.SetActive(false);
-        this.audioSource = audioSourceObj.gameObject.GetComponent<AudioSource>();
+        this.audioSourceCanvas = GetComponents<AudioSource>()[0];
+        this.audioSourceSound = GetComponents<AudioSource>()[1];
 
     }
 
@@ -103,7 +105,8 @@ public class LightingManager : MonoBehaviour
     public void FinalizarDia(Component sender, object data)
     {
         disparouNotificacaoFimDia = false;
-        this.audioSource.Play();
+        this.audioSourceCanvas.Play();
+        this.audioSourceSound.Play();
         Debug.Log("Fim do dia!");
         timeOfDay = (fimDoDia - 1);
         UpdateLighting(timeOfDay / 24f);

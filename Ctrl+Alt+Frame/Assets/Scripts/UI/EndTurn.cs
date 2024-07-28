@@ -12,6 +12,8 @@ public class EndTurn : MonoBehaviour
 
     public void endTurn()
     {
+
+
         endTurnClick.Raise(this, null);
     }
 
