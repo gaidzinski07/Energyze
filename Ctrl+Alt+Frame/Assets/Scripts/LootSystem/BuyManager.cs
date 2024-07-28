@@ -158,13 +158,6 @@ public class BuyManager : MonoBehaviour
             return;
         }
 
-        if (gameManager.hookLevel == 3)
-        {
-            currentHookTMP.text = "MAX";
-            currentHookRoofTMP.text = "";
-            return;
-
-        }
         this.BuySource.Play();
         var energy = this.gameManager.GetEnergyAmount();
         var neededHookXp = roofHookXp - currentHookXp;

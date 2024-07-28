@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,9 +20,14 @@ public class Looteable : MonoBehaviour
     private bool onAction;
     private string objectName = "cano velho";
 
+    private int commonRoof = 70;
+    private int uncommonRoof = 15;
+    private int rareRoof = 5;
+
     private AudioSource CollectaudioSource;
 
     private AudioSource LootedSource;
+
 
     public int totalLootPercent { get; private set; }
     public int CategoryLoot { get; private set; }
@@ -82,39 +88,54 @@ public class Looteable : MonoBehaviour
             this.lootRarityIncrease = Random.Range(20, 30);//20 - 30%
         }
 
+        if (lootRarityType == 1)
+        {
+            this.commonRoof = 70;
+            this.uncommonRoof = 95;
+        }
+        else if (lootRarityType == 2)
+        {
+            this.commonRoof = 50;
+            this.uncommonRoof = 85;
+        }
+        else
+        {
+            this.commonRoof = 30;
+            this.uncommonRoof = 70;
+        }
+
         this.CategoryLoot = Random.Range(0, 100);
-        this.CategoryLoot += 20 * lootRarityType;
-        if ((this.CategoryLoot + this.lootRarityIncrease) < 70)
+        if ((this.CategoryLoot + this.lootRarityIncrease) < commonRoof)
         {
             //Debug.Log("Item comum encontrado");
-            rarity = "comum";
+            rarity = "Common";
         }
-        else if ((this.CategoryLoot + this.lootRarityIncrease) < 95)
+        else if ((this.CategoryLoot + this.lootRarityIncrease) < uncommonRoof)
         {
             //Debug.Log("Item escasso encontrado! 30% de chance!");
-            rarity = "escasso";
+            rarity = "Uncommon";
         }
         else
         {
             //Debug.Log("item raro encontrado! 5% de chance!");
-            rarity = "raro";
+            rarity = "Rare";
         }
         this.totalLootPercent = Mathf.Clamp(this.CategoryLoot + this.lootRarityIncrease, 0, 99);
     }
 
     private void getEnergy()
     {
-        if (rarity == "comum")
+        if (rarity == "Common")
         {
-            this.energy = Random.Range(30, 90);
+            this.energy = Random.Range(50, 70);
         }
-        else if (rarity == "escasso")
+        else if (rarity == "Uncommon")
         {
-            this.energy = Random.Range(100, 200);
+            this.energy = Random.Range(200, 250);
         }
         else
         {
-            this.energy = Random.Range(300, 500);
+            this.energy = Random.Range(650, 700);
         }
     }
 
@@ -125,6 +146,7 @@ public class Looteable : MonoBehaviour
         List<string> lootTypes = new List<string> { "C", "B", "A" };
         this.playerObject.GetComponent<CollectBar>().lootType.text = lootTypes[lootRarityType - 1];
         yield return new WaitForSeconds(3f);
+        this.playerObject.GetComponent<CollectBar>().showRarityFeedback(rarity);
         this.playerObject.GetComponents<AudioSource>()[0].Play();
         //Debug.Log("Item " + rarity + " encontrado entre os " + (100 - totalLootPercent) + "% mais raros!");
         //Debug.Log("Acabou de coletar!");
