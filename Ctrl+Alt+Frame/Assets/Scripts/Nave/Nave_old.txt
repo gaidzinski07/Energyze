@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using Cinemachine;
+
+public class Nave : MonoBehaviour
+{
+
+    private PlayerInput playerInput;
+    private InputAction moveAction;
+    private Animator anim;
+    [Range(1, 10)]
+    public int velocidadeMaxima = 2;
+    [Range(0, 10)]
+    public float movementSmooth;
+
+    private LootManager lootManager;
+
+    void Start()
+    {
+        playerInput = GetComponent<PlayerInput>();
+        moveAction = playerInput.actions.FindAction("Move");
+        lootManager = GetComponent<LootManager>();
+        //anim = GetComponent<Animator>();
+    }
+    void Update()
+    {
+        MovePlayer();
+    }
+
+
+    void MovePlayer()
+    {
+        Vector2 direction = moveAction.ReadValue<Vector2>();
+        Vector3 moveInput = new Vector3(direction.x, 0, direction.y);
+
+        if(!moveInput.Equals(Vector3.zero) && !lootManager.isLooting)
+        {
+            //rotaciona para direção do movimento
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveInput), movementSmooth * Time.deltaTime);
+            Vector3 newRot = new Vector3(0, transform.eulerAngles.y, 0);
+            transform.eulerAngles = newRot;
+            //anim.SetBool("Moving", true);
+            transform.position += moveInput * Time.deltaTime * velocidadeMaxima;
+            return;
+        }
+        //anim.SetBool("Moving", false);
+
+    }
+
+}
