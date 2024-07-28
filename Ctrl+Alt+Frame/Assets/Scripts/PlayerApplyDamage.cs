@@ -69,7 +69,7 @@ public class DetectObjectsInLayer : MonoBehaviour
             {
                 // Verificar se é um inimigo e destruí-lo
                 Debug.Log("Destruindo inimigo: " + hitCollider.gameObject.name);
-                this.gm.IncreaseEnergyAmount(100);
+                this.gm.IncreaseEnergyAmount(200);
                 Destroy(hitCollider.gameObject);
             }
         }

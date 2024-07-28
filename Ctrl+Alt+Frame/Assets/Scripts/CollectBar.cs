@@ -20,9 +20,9 @@ public class CollectBar : MonoBehaviour
     IEnumerator collectCoroutine()
     {
         fill += 1;
-        bar.fillAmount = fill / 30f;
+        bar.fillAmount = fill / 25f;
         yield return new WaitForSeconds(0.1f);
-        if (fill < 30f)
+        if (fill < 25f)
         {
             StartCoroutine(collectCoroutine());
         }

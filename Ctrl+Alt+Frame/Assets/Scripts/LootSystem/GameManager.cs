@@ -154,13 +154,10 @@ public class GameManager : MonoBehaviour
         {
             //this.GetComponents<AudioSource>()[1].Stop();
             this.gasAmount = 0; // Garante que a energia não seja negativa
+            DecreaseLife();
             Debug.Log("Energia esgotada!");
-            if(energyAmount <= 0)
-            {
-                DecreaseLife();
-            }
             this.lifeAmountTMP.text = lifes.ToString();
-            this.gasAmount = this.gasLimit/5;
+            this.gasAmount = this.gasLimit/2;
             //this.transform.position = new Vector3(408, 16, 341);
             //this.lightingManager.GetComponent<LightingManager>().FinalizarDia(this, null);
             this.DecreaseEnergyAmount(200);
