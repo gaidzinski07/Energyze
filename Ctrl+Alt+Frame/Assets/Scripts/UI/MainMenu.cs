@@ -10,8 +10,16 @@ public class MainMenu : MonoBehaviour
     public Animator anim;
     public Image loadBar;
 
+    public void Start()
+    {
+        Time.timeScale = 1;
+        Debug.Log("começou");
+        anim.SetTrigger("Main");
+    }
+
     public void changeMenu(GameObject targetMenu)
     {
+        ResetAllTriggers();
         if (menus.Contains(targetMenu)) {
             if(targetMenu.name == "MainMenu")
             {
@@ -55,6 +63,17 @@ public class MainMenu : MonoBehaviour
 
             loadBar.fillAmount = progressValue;
             yield return null;
+        }
+    }
+
+    private void ResetAllTriggers()
+    {
+        foreach (var param in anim.parameters)
+        {
+            if (param.type == AnimatorControllerParameterType.Trigger)
+            {
+                anim.ResetTrigger(param.name);
+            }
         }
     }
 }

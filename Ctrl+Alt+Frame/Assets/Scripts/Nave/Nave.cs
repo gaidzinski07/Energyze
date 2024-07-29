@@ -14,12 +14,15 @@ public class Nave : MonoBehaviour
     public int velocidadeMaxima = 2;
     [Range(0, 10)]
     public float movementSmooth;
+    private LootManager lootManager;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         moveAction = playerInput.actions.FindAction("Move");
         anim = GetComponent<Animator>();
+        lootManager = GetComponent<LootManager>();
+
     }
     void Update()
     {
@@ -32,7 +35,7 @@ public class Nave : MonoBehaviour
         Vector2 direction = moveAction.ReadValue<Vector2>();
         Vector3 moveInput = new Vector3(direction.x, 0, direction.y);
 
-        if(!moveInput.Equals(Vector3.zero))
+        if(!moveInput.Equals(Vector3.zero) && !lootManager.isLooting)
         {
             //rotaciona para direção do movimento
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveInput), movementSmooth * Time.deltaTime);

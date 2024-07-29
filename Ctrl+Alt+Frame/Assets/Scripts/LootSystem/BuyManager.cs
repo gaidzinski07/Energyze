@@ -28,13 +28,13 @@ public class BuyManager : MonoBehaviour
     public int currentHookXp;
     public int roofHookXp;
 
-    private int roofBatteryLv2 = 1000;
+    private int roofBatteryLv2 = 1500;
     private int roofBatteryLv3 = 2000;
 
-    private int roofEngineLv2 = 1000;
+    private int roofEngineLv2 = 2000;
     private int roofEngineLv3 = 2000;
 
-    private int roofHookLv2 = 1000;
+    private int roofHookLv2 = 1900;
     private int roofHookLv3 = 2000;
 
     private GameManager gameManager;

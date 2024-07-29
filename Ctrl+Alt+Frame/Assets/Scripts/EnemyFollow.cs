@@ -63,4 +63,9 @@ public class EnemyFollow : MonoBehaviour
             hasnStartedDamage = true;
         }
     }
+
+    private void OnDestroy()
+    {
+        OptimizationManager.RemoveMe(gameObject);
+    }
 }

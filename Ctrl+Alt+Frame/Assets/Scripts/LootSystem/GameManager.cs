@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI lifeAmountTMP;
 
     public GameObject lightingManager;
+    public Transform hook;
+    private Vector3 originalHookPosition;
 
     public float distance;
 
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
         IncreaseGas();
         this.timer = 0f;
         this.centerPosition = transform.position;
+        originalHookPosition = hook.localPosition;
     }
 
     // Update is called once per frame
@@ -154,10 +157,12 @@ public class GameManager : MonoBehaviour
         {
             //this.GetComponents<AudioSource>()[1].Stop();
             this.gasAmount = 0; // Garante que a energia não seja negativa
-            DecreaseLife();
+            if(energyAmount <= 0)
+            {
+                DecreaseLife();
+            }
             Debug.Log("Energia esgotada!");
-
-            this.gasAmount = this.gasLimit/2;
+            this.gasAmount = (int) (this.gasLimit * 0.3f);
             //this.transform.position = new Vector3(408, 16, 341);
             //this.lightingManager.GetComponent<LightingManager>().FinalizarDia(this, null);
             this.DecreaseEnergyAmount(200);
@@ -227,13 +232,19 @@ public class GameManager : MonoBehaviour
     public void checkGameOverOnEndOfDay(Component sender, object data)
     {
         if (distance >= 50) {
-            DecreaseLife();
-            this.player.transform.position = new Vector3(1680, 16, 1582);
+            gameOverEvent.Raise(this, null);
         }
     }
 
     public int GetEnergyAmount()
     {
         return energyAmount;
+    }
+
+    public void hookAnimation(Vector3 pos)
+    {
+        Sequence s = DOTween.Sequence();
+        s.Append(hook.transform.DOMove(pos, 1f));
+        s.Append(hook.transform.DOLocalMove(originalHookPosition, 2).OnComplete(() => hook.localEulerAngles = Vector3.zero));
     }
 }

@@ -33,6 +33,11 @@ public class GameEvents : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void Victory(Component sender, object data)
     {
         SceneManager.LoadScene("VictoryScene");

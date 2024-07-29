@@ -19,7 +19,6 @@ public class Meteor : MonoBehaviour
 
     private void Start()
     {
-
         player = FindObjectOfType<Nave>().gameObject;
 
         // Bit shift the index of the layer (8) to get a bit mask
@@ -70,6 +69,12 @@ public class Meteor : MonoBehaviour
         Debug.Log("Player distance is: " + dist);
         if(dist <= damageRay)
         {
+            GameManager manager = player.GetComponent<GameManager>();
+            if (manager.energyAmount <= 0)
+            {
+                manager.DecreaseLife();
+            }
+            player.GetComponent<GameManager>().DecreaseEnergyAmount(100);
             Debug.Log("Hit player! Haha");
         }
 

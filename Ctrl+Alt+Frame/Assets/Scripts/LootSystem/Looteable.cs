@@ -4,6 +4,7 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 public class Looteable : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class Looteable : MonoBehaviour
     private AudioSource CollectaudioSource;
 
     private AudioSource LootedSource;
+
+    public AudioSource failureSource;
+
+    public Ease scaleEase;
+    public Ease movementEase;
 
 
     public int totalLootPercent { get; private set; }
@@ -61,10 +67,20 @@ public class Looteable : MonoBehaviour
             return true;
         }
         Debug.Log("Longe demais! Chegue mais perto!");
+        failureSource.Play();
         return false;
     }
     private void BeginLootCollect()
     {
+        Sequence s = DOTween.Sequence();
+        s.AppendInterval(1);
+        s.Append(transform.DOMove(playerObject.transform.position, 2).SetEase(movementEase));
+        s.Join(transform.DOScale(transform.localScale * 0.2f, 2).SetEase(scaleEase));
+        s.Play();
+        Vector3 grabPos = transform.position;
+        grabPos.y += transform.localScale.y / 2;
+        playerObject.GetComponent<GameManager>().hook.LookAt(transform.position);
+        playerObject.GetComponent<GameManager>().hookAnimation(grabPos);
         this.CollectaudioSource.Play();
         this.playerObject.GetComponent<LootManager>().isLooting = true;
         getRarity();
@@ -165,5 +181,9 @@ public class Looteable : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnDestroy()
+    {
+        OptimizationManager.RemoveMe(gameObject);
+    }
 
 }

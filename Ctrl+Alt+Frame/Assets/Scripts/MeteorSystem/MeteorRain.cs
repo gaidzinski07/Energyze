@@ -31,7 +31,6 @@ public class MeteorRain : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(maxTimeBetweenMeteors);
             if (active)
             {
                 Debug.Log("New meteor");
@@ -40,6 +39,7 @@ public class MeteorRain : MonoBehaviour
                 Vector3 position = new Vector3( transform.position.x + Random.Range(x * -1, x), transform.position.y, transform.position.z + Random.Range(z * -1, z));
                 Instantiate(meteorPrefab, position, meteorPrefab.transform.rotation);
             }
+            yield return new WaitForSeconds(maxTimeBetweenMeteors);
         }
     }
 }

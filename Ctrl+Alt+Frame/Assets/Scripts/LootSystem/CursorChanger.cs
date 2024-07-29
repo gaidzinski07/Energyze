@@ -14,4 +14,10 @@ public class CursorChanger : MonoBehaviour
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
+
+    private void OnDestroy()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
 }
